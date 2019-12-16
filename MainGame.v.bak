@@ -1,0 +1,109 @@
+module MainGame(input [31:0] state,
+					 input clock,
+					 input t_clock,
+					 input [2:0] enter,
+					 output integer number,
+					 output reg [11:0] cord,
+					 output reg [2:0] Combo);
+		//Game input Time  == 1ms;
+		integer score;
+		integer seconds;
+		integer timeCollapse;
+		reg displayScore;
+		reg [15:0] randCord;
+		reg HIT;
+		reg [2:0]PrevEnter;
+		initial 
+		begin
+			score <= 0;
+			seconds <= 0;
+			timeCollapse <= 0;
+			displayScore <= 1'b1;
+			randCord <= $urandom%8;
+			HIT <= 0;
+			PrevEnter <= 3'b000;
+			number = 0;
+			cord <= 0;
+			Combo <= 0;
+		end
+		
+		always@(posedge t_clock)
+		begin
+			case(state)
+				0:
+				begin
+				
+				end
+				1:
+				begin
+				//GameTime
+					timeCollapse <= timeCollapse +1;
+					if(timeCollapse == 1000)begin
+					
+						seconds <= seconds + 1;
+						timeCollapse <= 0;
+					end
+					
+				//Game Hit Cord
+					if(enter != PrevEnter)
+					begin
+						if(enter[2] != cord[0]) HIT <= 0;
+						else cord[0] <= 0;
+						if(enter[1] != cord[1]) HIT <= 0;
+						else cord[1] <= 0;
+						if(enter[0] != cord[2]) HIT <= 0;
+						else cord[2] <=0;
+						PrevEnter = enter;
+					end					
+				end
+				2:
+				begin
+				//GameToggle
+					if(enter[0]==1)
+					begin
+						displayScore <= !displayScore;
+						if(displayScore)number <= score;
+						else number <= timeCollapse;
+					end
+				//GameReset
+					if(enter[2]==1)
+					begin
+					score <= 0;
+					seconds <= 0;
+					timeCollapse <= 0;
+					displayScore <= 1'b1;
+					randCord <= $urandom%8;
+					HIT <= 0;
+					PrevEnter <= 3'b000;
+					number = 0;
+					cord <= 0;
+					Combo <= 0;
+					end
+				end
+				default:;
+			endcase
+		end
+
+		always@(posedge clock)
+		begin
+			if(state==1)
+			begin
+			//Score Count
+			 if(HIT)
+			 begin
+				score <= score + 1;
+				Combo <= Combo + 1;
+			 end
+			 else 
+				Combo <= 0;
+				
+			
+			//Reset Hit Boolean
+			 HIT <= 1;
+			
+			//Generate Cord
+			 randCord <= $urandom%8;
+			 cord <= {randCord[2:0] , cord[8:0]};
+			end
+		end
+endmodule

@@ -1,0 +1,9 @@
+module Input(enter, speed, stop, enter_out, speed_out, stop_out, clk)
+
+	input [2:0]enter, speed;
+	input stop, clk;
+	output [2:0]enter_out, speed_out;
+	output stop_out;
+
+	
+endmodule

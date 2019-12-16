@@ -1,0 +1,40 @@
+module Seg7Decode(num, seg7Decode);
+  input [3:0] num;
+  output reg [7:0] seg7Decode;
+  always @(num)
+  begin
+    case(num)
+	  0 : seg7Decode = 8'b11000000;
+	  1 : seg7Decode = 8'b11111001;
+	  2 : seg7Decode = 8'b10100100;
+	  3 : seg7Decode = 8'b10110000;
+	  4 : seg7Decode = 8'b10011001;
+	  5 : seg7Decode = 8'b10010010;
+	  6 : seg7Decode = 8'b10000010;
+	  7 : seg7Decode = 8'b11011000;
+	  8 : seg7Decode = 8'b10000000;
+	  9 : seg7Decode = 8'b10010000;
+	  default: 
+	    seg7Decode = 8'b11111111;
+	endcase
+  end
+endmodule
+
+
+module Bin2Dec(Bin, Seg7);
+  input [12:0] Bin;
+  output [31:0] Seg7;
+  wire [3:0] n0, n1, n2, n3;
+  wire [7:0] tmp;
+  
+  assign n3 = Bin/1000;
+  assign n2 = (Bin % 1000)/100;
+  assign n1 = (Bin % 100)/10;
+  assign n0 = (Bin % 10);
+  assign Seg7[23:16] = {1'b0, tmp[6:0]};
+  
+  Seg7Decode s0(n0, Seg7[7:0]);
+  Seg7Decode s1(n1, Seg7[15:8]);
+  Seg7Decode s2(n2, tmp[7:0]);
+  Seg7Decode s3(n3, Seg7[31:24]);
+endmodule

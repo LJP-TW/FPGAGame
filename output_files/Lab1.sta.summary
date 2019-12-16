@@ -1,0 +1,173 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'mainclk'
+Slack : -74.368
+TNS   : -1482.971
+
+Type  : Slow 1200mV 85C Model Setup 'sysClk:inst11|out_clk'
+Slack : -3.519
+TNS   : -526.254
+
+Type  : Slow 1200mV 85C Model Setup 'GameClock:inst28|out_clk'
+Slack : -0.940
+TNS   : -0.940
+
+Type  : Slow 1200mV 85C Model Setup 'output_Clk:inst52|out_clk'
+Slack : 0.073
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mainclk'
+Slack : -0.195
+TNS   : -0.486
+
+Type  : Slow 1200mV 85C Model Hold 'output_Clk:inst52|out_clk'
+Slack : 0.111
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sysClk:inst11|out_clk'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'GameClock:inst28|out_clk'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'mainclk'
+Slack : -0.859
+TNS   : -65.346
+
+Type  : Slow 1200mV 85C Model Removal 'mainclk'
+Slack : 0.739
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mainclk'
+Slack : -3.000
+TNS   : -295.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sysClk:inst11|out_clk'
+Slack : -1.000
+TNS   : -202.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'output_Clk:inst52|out_clk'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GameClock:inst28|out_clk'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Slow 1200mV 0C Model Setup 'mainclk'
+Slack : -66.425
+TNS   : -1293.730
+
+Type  : Slow 1200mV 0C Model Setup 'sysClk:inst11|out_clk'
+Slack : -3.083
+TNS   : -455.981
+
+Type  : Slow 1200mV 0C Model Setup 'GameClock:inst28|out_clk'
+Slack : -0.709
+TNS   : -0.709
+
+Type  : Slow 1200mV 0C Model Setup 'output_Clk:inst52|out_clk'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mainclk'
+Slack : -0.238
+TNS   : -0.613
+
+Type  : Slow 1200mV 0C Model Hold 'output_Clk:inst52|out_clk'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sysClk:inst11|out_clk'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'GameClock:inst28|out_clk'
+Slack : 0.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'mainclk'
+Slack : -0.660
+TNS   : -47.058
+
+Type  : Slow 1200mV 0C Model Removal 'mainclk'
+Slack : 0.670
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mainclk'
+Slack : -3.000
+TNS   : -295.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sysClk:inst11|out_clk'
+Slack : -1.000
+TNS   : -202.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'output_Clk:inst52|out_clk'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GameClock:inst28|out_clk'
+Slack : -1.000
+TNS   : -1.000
+
+Type  : Fast 1200mV 0C Model Setup 'mainclk'
+Slack : -41.865
+TNS   : -742.285
+
+Type  : Fast 1200mV 0C Model Setup 'sysClk:inst11|out_clk'
+Slack : -1.526
+TNS   : -208.942
+
+Type  : Fast 1200mV 0C Model Setup 'GameClock:inst28|out_clk'
+Slack : -0.157
+TNS   : -0.157
+
+Type  : Fast 1200mV 0C Model Setup 'output_Clk:inst52|out_clk'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mainclk'
+Slack : -0.225
+TNS   : -0.616
+
+Type  : Fast 1200mV 0C Model Hold 'output_Clk:inst52|out_clk'
+Slack : 0.012
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sysClk:inst11|out_clk'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'GameClock:inst28|out_clk'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'mainclk'
+Slack : -0.083
+TNS   : -1.931
+
+Type  : Fast 1200mV 0C Model Removal 'mainclk'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mainclk'
+Slack : -3.000
+TNS   : -313.612
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sysClk:inst11|out_clk'
+Slack : -1.000
+TNS   : -202.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'output_Clk:inst52|out_clk'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GameClock:inst28|out_clk'
+Slack : -1.000
+TNS   : -1.000
+
+------------------------------------------------------------

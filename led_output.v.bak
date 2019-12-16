@@ -1,0 +1,64 @@
+module LED_output(clk, comble, LED);
+	input clk, comble;
+	output [9:0] LED;
+	reg[9:0] rand;
+	
+	always@(posedge clk) begin		
+		case(comble)
+			0:
+			begin
+				LED[9:0] <= 10'b0;
+			end
+			1:
+			begin
+				LED[0] <= 1'b1;
+				LED[9:1] <= 9'b0;
+			end
+			2:
+			begin
+				LED[1:0] <= 2'b1;
+				LED[9:2] <= 8'b0;
+			end
+			3:
+			begin
+				LED[2:0] <= 3'b1;
+				LED[9:3] <= 7'b0;
+			end
+			4:
+			begin
+				LED[3:0] <= 4'b1;
+				LED[9:4] <= 6'b0;
+			end
+			5:
+			begin
+				LED[4:0] <= 5'b1;
+				LED[9:5] <= 5'b0;
+			end
+			6:
+			begin
+				LED[5:0] <= 6'b1;
+				LED[9:6] <= 4'b0;
+			end
+			7:
+			begin
+				LED[6:0] <= 7'b1;
+				LED[9:7] <= 3'b0;
+			end
+			8:
+			begin
+				LED[7:0] <= 8'b1;
+				LED[9:8] <= 2'b0;
+			end
+			9:
+			begin
+				LED[8:0] <= 9'b1;
+				LED[9] <= 1'b0;
+			end
+			default:
+			begin
+				rand = $random % 1024;
+				LED <= rand;
+			end
+		endcase
+	end
+endmodule
